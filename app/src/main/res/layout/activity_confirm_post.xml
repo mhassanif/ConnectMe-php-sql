@@ -1,10 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ConfirmPost">
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:padding="16dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- Close Button & Title -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="8dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="20dp">
+
+        <ImageView
+            android:id="@+id/close_button"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/cross"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New post"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:textColor="@android:color/black"
+            android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+
+    <!-- Image Scrollable Section -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/image_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="20dp">
+
+            <ImageView
+                android:layout_width="250dp"
+                android:layout_height="300dp"
+                android:src="@drawable/post2"
+                android:scaleType="centerCrop"
+                android:layout_marginEnd="8dp"
+                android:layout_marginHorizontal="10dp"/>
+
+            <ImageView
+                android:layout_width="250dp"
+                android:layout_height="300dp"
+                android:src="@drawable/post1"
+                android:scaleType="centerCrop"
+                android:layout_marginEnd="8dp"
+                android:layout_marginHorizontal="10dp"/>
+
+            <ImageView
+                android:layout_width="250dp"
+                android:layout_height="300dp"
+                android:src="@drawable/post3"
+                android:scaleType="centerCrop"
+                android:layout_marginHorizontal="10dp"/>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- Caption Input Field -->
+    <EditText
+        android:id="@+id/caption_input"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:hint="Add a caption..."
+        android:background="@drawable/view_profile_button"
+        android:padding="12dp"
+        android:textSize="16sp"
+        android:layout_marginTop="40dp"
+        android:textColorHint="@color/white"/>
+
+    <!-- Share Button -->
+    <Button
+        android:id="@+id/share_button"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Share"
+        android:textSize="16sp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/rounded_rectange_button"
+        android:layout_marginTop="100dp"
+        android:textAllCaps="false"
+        />
+</LinearLayout>
