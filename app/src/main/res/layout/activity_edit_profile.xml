@@ -12,7 +12,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:gravity="center_vertical">
+        android:gravity="center_vertical"
+        android:layout_marginHorizontal="20dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -64,6 +65,7 @@
         android:textColor="#59442F"
         android:layout_marginTop="16dp"
         android:textStyle="bold"
+        android:layout_marginHorizontal="20dp"
         />
 
     <EditText
@@ -73,7 +75,8 @@
         android:background="@drawable/edit_text_outline"
         android:padding="10dp"
         android:text="Olivia Daniel"
-        android:textColor="@color/black"/>
+        android:textColor="@color/black"
+        android:layout_marginHorizontal="20dp"/>
 
     <!-- Username Input -->
     <TextView
@@ -83,7 +86,8 @@
         android:textSize="16sp"
         android:textColor="@color/black"
         android:layout_marginTop="12dp"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:layout_marginHorizontal="20dp"/>
 
     <EditText
         android:id="@+id/username_input"
@@ -92,7 +96,8 @@
         android:background="@drawable/edit_text_outline"
         android:padding="10dp"
         android:text="OliviaD"
-        android:textColor="@color/black"/>
+        android:textColor="@color/black"
+        android:layout_marginHorizontal="20dp"/>
 
     <!-- Contact Number Input -->
     <TextView
@@ -102,7 +107,8 @@
         android:textSize="16sp"
         android:textColor="@color/black"
         android:layout_marginTop="12dp"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:layout_marginHorizontal="20dp"/>
 
     <EditText
         android:id="@+id/contact_number_input"
@@ -112,7 +118,8 @@
         android:padding="10dp"
         android:text="+42 7412 5443058"
         android:textColor="@color/black"
-        android:inputType="phone"/>
+        android:inputType="phone"
+        android:layout_marginHorizontal="20dp"/>
 
     <!-- Bio Input -->
 
@@ -120,12 +127,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginVertical="35dp">
+        android:layout_marginVertical="35dp"
+        android:layout_marginHorizontal="20dp">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Bio"
-            android:textSize="16sp"
+            android:textSize="18sp"
             android:textColor="@color/black"
             android:layout_marginTop="12dp"
             android:textStyle="bold"

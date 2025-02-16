@@ -19,7 +19,7 @@ class NavBar(private val activity: Activity) {
         }
 
         searchButton.setOnClickListener {
-            val intent = Intent(activity, Login::class.java)
+            val intent = Intent(activity, Search::class.java)
             activity.startActivity(intent)
         }
 
