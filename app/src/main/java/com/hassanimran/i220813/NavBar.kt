@@ -24,7 +24,7 @@ class NavBar(private val activity: Activity) {
         }
 
         postButton.setOnClickListener {
-            val intent = Intent(activity, Login::class.java)
+            val intent = Intent(activity, NewPost::class.java)
             activity.startActivity(intent)
         }
 
@@ -34,7 +34,7 @@ class NavBar(private val activity: Activity) {
         }
 
         contactButton.setOnClickListener {
-            val intent = Intent(activity, Login::class.java)
+            val intent = Intent(activity, Contacts::class.java)
             activity.startActivity(intent)
         }
     }
