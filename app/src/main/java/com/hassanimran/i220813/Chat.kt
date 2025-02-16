@@ -42,5 +42,19 @@ class Chat : AppCompatActivity() {
             startActivity(intent)
         }
 
+        //set call button
+        val callButton: ImageView = findViewById(R.id.call)
+        callButton.setOnClickListener {
+            val intent = Intent(this, VoiceCall::class.java)
+            startActivity(intent)
+        }
+
+        //set call button
+        val videoCallButton: ImageView = findViewById(R.id.video_call)
+        videoCallButton.setOnClickListener {
+            val intent = Intent(this, VideoCall::class.java)
+            startActivity(intent)
+        }
+
     }
 }

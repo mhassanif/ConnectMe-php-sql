@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <!-- User Name -->
+    <TextView
+        android:id="@+id/user_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Henry Benjamin"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:textColor="@color/black"
+        android:layout_above="@id/profile_image"
+        android:layout_marginVertical="100dp"/>
+
+    <!-- Profile Picture -->
+    <ImageView
+        android:id="@+id/profile_image"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/voice_call_pfp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10:32"
+        android:textSize="25sp"
+        android:textColor="@color/black"
+        android:layout_below="@id/profile_image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"/>
+
+    <!-- Bottom Button Bar -->
+    <LinearLayout
+        android:id="@+id/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:padding="15dp"
+        android:background="@drawable/call_optns"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="20dp">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="5dp"
+            android:background="@drawable/optns"
+            android:layout_marginEnd="10dp"
+            />
+
+        <!-- Video Call -->
+        <ImageView
+            android:id="@+id/video_call_optn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="10dp"
+            android:background="@drawable/video_call"
+            android:layout_marginEnd="10dp"
+            />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="10dp"
+            android:background="@drawable/speaker"
+            android:layout_marginEnd="10dp"
+            />
+
+        <!-- Speaker -->
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="10dp"
+            android:background="@drawable/mute"
+            android:layout_marginEnd="10dp"
+            />
+
+        <!-- End Call -->
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="10dp"
+            android:background="@drawable/end_call"
+            />
+    </LinearLayout>
+
+
+</RelativeLayout>
