@@ -67,8 +67,41 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:scrollbars="none"
+                >
                 <!-- Add your story items here -->
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/my_story"
+                     />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/story_1"
+                     />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/story_2"
+                    />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/story_3"
+                    />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/story_1"
+                    />
+
             </LinearLayout>
         </HorizontalScrollView>
 
@@ -76,15 +109,131 @@
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
-            android:padding="10dp">
+            android:layout_weight="1">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
-                <!-- Add your post items here -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+                    <!-- User Profile Section -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <!-- Profile Image -->
+                        <ImageView
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:src="@drawable/post_pfp"
+                            android:layout_marginLeft="15dp"
+                            />
+
+                        <!-- Username -->
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Emily James"
+                            android:textStyle="bold"
+                            android:textSize="20dp"
+                            android:textColor="#313131"
+                            android:layout_marginLeft="15dp"/>
+
+                        <!-- Options Button -->
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/post_optns_icon"
+                            android:layout_marginRight="15dp"
+                            />
+                    </LinearLayout>
+
+                    <!-- Post Image -->
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/post_image_1"
+                        android:layout_marginTop="8dp"/>
+
+                    <!-- Interaction Buttons -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="start"
+                        android:paddingTop="5dp"
+                        android:layout_marginHorizontal="10dp">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/like_icon"
+                            android:contentDescription="Like"
+                            android:layout_marginEnd="15dp"/>
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/comment_icon"
+                            android:contentDescription="Comment"
+                            android:layout_marginEnd="15dp"/>
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/share_icon"
+                            android:contentDescription="Share"
+                            />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"/>
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:contentDescription="Share"
+                            android:src="@drawable/save_icon"
+
+                            />
+
+                    </LinearLayout>
+
+                    <!-- Caption Section -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Emily James"
+                        android:textSize="14sp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginHorizontal="10dp"
+                        android:textStyle="bold"
+                        android:textColor="#313131"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Had a great hike across this beautiful landscape 🖤🎶🏔️"
+                        android:textSize="14sp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginHorizontal="10dp"
+                        android:textColor="#313131"/>
+
+
+                </LinearLayout>
             </LinearLayout>
+
         </ScrollView>
     </LinearLayout>
 
