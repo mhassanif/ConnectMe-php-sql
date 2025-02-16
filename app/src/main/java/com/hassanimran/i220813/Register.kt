@@ -1,6 +1,10 @@
 package com.hassanimran.i220813
 
+import android.content.Intent
 import android.os.Bundle
+import android.text.Html
+import android.widget.Button
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -9,12 +13,21 @@ import androidx.core.view.WindowInsetsCompat
 class Register : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.activity_register)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+
+        val registerButton: Button = findViewById(R.id.register_button)
+        val loginButton: Button = findViewById(R.id.login_button)
+
+        registerButton.setOnClickListener {
+            // Navigate to HomeActivity
+            val intent = Intent(this, Home::class.java)
+            startActivity(intent)
+        }
+
+        loginButton.setOnClickListener {
+            // Navigate to LoginActivity
+            val intent = Intent(this, Login::class.java)
+            startActivity(intent)
         }
     }
 }

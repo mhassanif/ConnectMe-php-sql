@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">i220813</string>
+    <string name="agree_terms">
+        By clicking Agree and continue below, I agree to\n
+        <a href="https://www.google.com">Terms of Service</a> &amp;
+        <a href="https://www.google.com">Privacy Policy</a>
+    </string>
 </resources>
