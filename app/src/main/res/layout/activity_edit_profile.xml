@@ -1,10 +1,149 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EditProfile">
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:padding="16dp"
+    android:id="@+id/main">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- Top Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit Profile"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:textColor="@color/black"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/done_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Done"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:textColor="#59442F"
+            />
+    </LinearLayout>
+
+    <!-- Profile Image -->
+    <ImageView
+        android:id="@+id/profile_image"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center"
+        android:scaleType="centerCrop"
+        android:src="@drawable/edit_pfp"
+        android:layout_marginTop="12dp"/>
+
+    <TextView
+        android:id="@+id/user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Olivia Daniel"
+        android:textSize="23dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Name Input -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:textSize="16sp"
+        android:textColor="#59442F"
+        android:layout_marginTop="16dp"
+        android:textStyle="bold"
+        />
+
+    <EditText
+        android:id="@+id/name_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_outline"
+        android:padding="10dp"
+        android:text="Olivia Daniel"
+        android:textColor="@color/black"/>
+
+    <!-- Username Input -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Username"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="12dp"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/username_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_outline"
+        android:padding="10dp"
+        android:text="OliviaD"
+        android:textColor="@color/black"/>
+
+    <!-- Contact Number Input -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Contact Number"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="12dp"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/contact_number_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_outline"
+        android:padding="10dp"
+        android:text="+42 7412 5443058"
+        android:textColor="@color/black"
+        android:inputType="phone"/>
+
+    <!-- Bio Input -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginVertical="35dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bio"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="12dp"
+            android:textStyle="bold"
+            android:layout_marginRight="20dp"/>
+
+        <EditText
+            android:id="@+id/bio_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Just an average 14 year old"
+            android:textColor="@color/black"
+            android:inputType="textMultiLine"
+            />
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
