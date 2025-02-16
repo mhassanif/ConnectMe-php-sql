@@ -16,5 +16,9 @@ class Home : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        // Initialize and set up the NavBar
+        val navBar = NavBar(this)
+        navBar.setupNavBar()
     }
 }
