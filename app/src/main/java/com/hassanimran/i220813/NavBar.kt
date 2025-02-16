@@ -29,7 +29,7 @@ class NavBar(private val activity: Activity) {
         }
 
         profileButton.setOnClickListener {
-            val intent = Intent(activity, Login::class.java)
+            val intent = Intent(activity, Profile::class.java)
             activity.startActivity(intent)
         }
 
