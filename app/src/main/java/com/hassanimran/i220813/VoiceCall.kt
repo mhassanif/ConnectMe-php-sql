@@ -24,5 +24,11 @@ class VoiceCall : AppCompatActivity() {
             val intent = Intent(this, VideoCall::class.java)
             startActivity(intent)
         }
+
+        val endCall: ImageView = findViewById(R.id.end_call)
+        endCall.setOnClickListener {
+            val intent = Intent(this, Home::class.java)
+            startActivity(intent)
+        }
     }
 }

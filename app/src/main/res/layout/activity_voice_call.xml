@@ -90,6 +90,7 @@
 
         <!-- End Call -->
         <ImageView
+            android:id="@+id/end_call"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:padding="10dp"
