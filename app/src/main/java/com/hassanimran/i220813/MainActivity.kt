@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
 
         // Wait 3 seconds then switch to Login activity
         Handler(Looper.getMainLooper()).postDelayed({
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, Login::class.java))
             finish()
         }, 3000)
     }
