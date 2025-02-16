@@ -1,10 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Camera">
+    android:background="#E0E0E0"
+    android:id="@+id/main">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- Close Button (Top Left) -->
+    <ImageView
+        android:id="@+id/close_button"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:padding="16dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/camera_cross"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="20dp"/>
+
+    <!-- Next Button (Top Right) -->
+    <TextView
+        android:id="@+id/next_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#6B4F35"
+        android:padding="16dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"/>
+
+    <!-- Bottom Controls -->
+    <RelativeLayout
+        android:id="@+id/bottom_controls"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_alignParentBottom="true"
+        android:padding="16dp">
+
+        <!-- Last Captured Image Preview (Bottom Left) -->
+        <ImageView
+            android:id="@+id/last_photo"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/post_image_1"
+            android:contentDescription="Last Photo"
+            android:scaleType="centerCrop"
+            android:background="@drawable/edit_text_outline"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"/>
+
+        <!-- Capture Button (Center) -->
+        <ImageView
+            android:id="@+id/capture_button"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/capture"
+            android:contentDescription="Capture Button"
+            android:layout_centerInParent="true"/>
+
+        <!-- Switch Camera (Bottom Right) -->
+        <ImageView
+            android:id="@+id/switch_camera"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/switch_cam"
+            android:contentDescription="Switch Camera"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"/>
+
+        <!-- Post / Story Selector (Below Capture Button) -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/capture_button"
+            android:layout_marginTop="2dp"
+            android:layout_alignStart="@id/capture_button"
+            android:layout_marginLeft="20dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Post"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:layout_marginEnd="16dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Story"
+                android:textSize="14sp"
+                android:textColor="@android:color/black"
+                android:layout_marginLeft="70dp"/>
+        </LinearLayout>
+
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
