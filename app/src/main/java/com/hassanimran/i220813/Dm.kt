@@ -2,6 +2,7 @@ package com.hassanimran.i220813
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.ImageView
 import android.widget.LinearLayout
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -23,6 +24,13 @@ class Dm : AppCompatActivity() {
         val topDm: LinearLayout = findViewById(R.id.top_dm)
         topDm.setOnClickListener {
             val intent = Intent(this, Chat::class.java)
+            startActivity(intent)
+        }
+
+
+        val back: ImageView = findViewById(R.id.back_button)
+        back.setOnClickListener {
+            val intent = Intent(this, Home::class.java)
             startActivity(intent)
         }
     }

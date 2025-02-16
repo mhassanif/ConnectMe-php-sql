@@ -14,10 +14,10 @@
         android:paddingBottom="10dp">
 
         <ImageView
+            android:id="@+id/back_button"
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:src="@drawable/back_icon"
-            android:contentDescription="Back"
             android:layout_marginEnd="10dp"/>
 
         <TextView

@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.LinearLayout
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -23,6 +24,18 @@ class Followers : AppCompatActivity() {
         val topChat: ImageView = findViewById(R.id.top_chat_icon)
         topChat.setOnClickListener {
             val intent = Intent(this, Chat::class.java)
+            startActivity(intent)
+        }
+
+        val back: ImageView = findViewById(R.id.back_button)
+        back.setOnClickListener {
+            val intent = Intent(this, Profile::class.java)
+            startActivity(intent)
+        }
+
+        val tabChange: TextView = findViewById(R.id.following_tab)
+        tabChange.setOnClickListener {
+            val intent = Intent(this, Following::class.java)
             startActivity(intent)
         }
     }
