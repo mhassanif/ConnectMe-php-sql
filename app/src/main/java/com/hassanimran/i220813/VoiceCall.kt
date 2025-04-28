@@ -7,6 +7,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.hassanimran.i220813.utils.CallManager
 
 class VoiceCall : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,6 +19,8 @@ class VoiceCall : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        // Start Voice Call Logic
+        CallManager.startVoiceCall(this)
 
         val videoCall: ImageView = findViewById(R.id.video_call_optn)
         videoCall.setOnClickListener {
@@ -27,8 +30,9 @@ class VoiceCall : AppCompatActivity() {
 
         val endCall: ImageView = findViewById(R.id.end_call)
         endCall.setOnClickListener {
-            val intent = Intent(this, Home::class.java)
+            val intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
         }
     }
+
 }

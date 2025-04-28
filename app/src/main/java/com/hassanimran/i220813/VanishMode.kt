@@ -37,7 +37,7 @@ class VanishMode : AppCompatActivity() {
         //set back button
         val backButton: ImageView = findViewById(R.id.back_button)
         backButton.setOnClickListener {
-            val intent = Intent(this, Home::class.java)
+            val intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
         }
     }

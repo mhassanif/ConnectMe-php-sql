@@ -14,9 +14,9 @@ class NavBar(private val activity: Activity) {
         val contactButton: Button = activity.findViewById(R.id.contact_button)
 
         homeButton.setOnClickListener {
-            val intent = Intent(activity, Home::class.java)
+            val intent = Intent(activity, HomeActivity::class.java)
             activity.startActivity(intent)
-        }
+        }// Set click listeners for the buttons
 
         searchButton.setOnClickListener {
             val intent = Intent(activity, Search::class.java)
