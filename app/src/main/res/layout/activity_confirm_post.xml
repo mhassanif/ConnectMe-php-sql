@@ -33,44 +33,19 @@
             android:layout_centerHorizontal="true"/>
     </RelativeLayout>
 
-    <!-- Image Scrollable Section -->
-    <HorizontalScrollView
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="8dp"
-        android:scrollbars="none">
+        android:layout_height="300dp"
+        android:layout_margin="10dp">
 
-        <LinearLayout
-            android:id="@+id/image_container"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginHorizontal="20dp">
-
-            <ImageView
-                android:layout_width="250dp"
-                android:layout_height="300dp"
-                android:src="@drawable/post2"
-                android:scaleType="centerCrop"
-                android:layout_marginEnd="8dp"
-                android:layout_marginHorizontal="10dp"/>
-
-            <ImageView
-                android:layout_width="250dp"
-                android:layout_height="300dp"
-                android:src="@drawable/post1"
-                android:scaleType="centerCrop"
-                android:layout_marginEnd="8dp"
-                android:layout_marginHorizontal="10dp"/>
-
-            <ImageView
-                android:layout_width="250dp"
-                android:layout_height="300dp"
-                android:src="@drawable/post3"
-                android:scaleType="centerCrop"
-                android:layout_marginHorizontal="10dp"/>
-        </LinearLayout>
-    </HorizontalScrollView>
+        <ImageView
+            android:id="@+id/selectedImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_placeholder"
+            android:contentDescription="Selected Image Preview"/>
+    </FrameLayout>
 
     <!-- Caption Input Field -->
     <EditText

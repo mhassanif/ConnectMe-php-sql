@@ -15,20 +15,22 @@
         android:padding="16dp">
 
         <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:background="@drawable/cross"
-            android:padding="8dp"/>
+            android:id="@+id/back_button"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/cross"
+            android:padding="8dp"
+            android:contentDescription="Close Button"/>
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="New post"
+            android:text="New Post"
             android:textSize="18sp"
             android:textStyle="bold"
             android:gravity="center"
-            android:textColor="@color/black"/>
+            android:textColor="@android:color/black"/>
 
         <TextView
             android:id="@+id/next_button"
@@ -37,23 +39,23 @@
             android:text="Next"
             android:textSize="16sp"
             android:textStyle="bold"
-            android:textColor="#5A422C"
+            android:textColor="@android:color/black"
             android:padding="8dp"/>
     </LinearLayout>
 
     <!-- Selected Image Preview -->
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="300dp">
+        android:layout_height="300dp"
+        android:layout_margin="10dp">
 
         <ImageView
             android:id="@+id/selectedImage"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
-            android:src="@drawable/post_image_1"
-            android:layout_marginHorizontal="50dp"/>
-
+            android:src="@drawable/profile"
+            android:contentDescription="Selected Image Preview"/>
     </FrameLayout>
 
     <!-- Gallery Section -->
@@ -70,13 +72,7 @@
             android:text="Recents"
             android:textSize="16sp"
             android:textStyle="bold"
-            android:paddingEnd="8dp"
-            android:textColor="@color/black"/>
-
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:src="@drawable/next"/>
+            android:textColor="@android:color/black"/>
 
         <View
             android:layout_width="0dp"
@@ -84,101 +80,21 @@
             android:layout_weight="1"/>
 
         <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@drawable/copy"
-            android:contentDescription="Camera"
-            android:padding="8dp"/>
-
-        <ImageView
             android:id="@+id/camera_post"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:src="@drawable/camera_icon"
-            android:contentDescription="Camera"
+            android:contentDescription="Open Camera"
             android:padding="8dp"/>
     </LinearLayout>
 
-    <ScrollView
+    <!-- Scrollable Image Grid -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/galleryRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:fillViewport="true">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="10dp">
-
-            <GridLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:columnCount="3"
-                android:padding="10dp">
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_columnWeight="1"
-                    android:scaleType="centerCrop"
-                    android:adjustViewBounds="true"
-                    android:src="@drawable/post1" />
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_columnWeight="1"
-                    android:scaleType="centerCrop"
-                    android:adjustViewBounds="true"
-                    android:src="@drawable/post2" />
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_columnWeight="1"
-                    android:scaleType="centerCrop"
-                    android:adjustViewBounds="true"
-                    android:src="@drawable/post3" />
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_columnWeight="1"
-                    android:scaleType="centerCrop"
-                    android:adjustViewBounds="true"
-                    android:src="@drawable/post3" />
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_columnWeight="1"
-                    android:scaleType="centerCrop"
-                    android:adjustViewBounds="true"
-                    android:src="@drawable/post1" />
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_columnWeight="1"
-                    android:scaleType="centerCrop"
-                    android:adjustViewBounds="true"
-                    android:src="@drawable/post2" />
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_columnWeight="1"
-                    android:scaleType="centerCrop"
-                    android:adjustViewBounds="true"
-                    android:src="@drawable/post2" />
-
-
-
-            </GridLayout>
-
-        </LinearLayout>
-
-    </ScrollView>
+        android:padding="5dp"
+        android:scrollbars="vertical"/>
 
 </LinearLayout>

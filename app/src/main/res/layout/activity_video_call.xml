@@ -5,43 +5,62 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#DEDEDE"
-    >
+    android:background="#DEDEDE">
+
+    <!-- Full-Screen Video for the Other Person -->
+    <TextureView
+        android:id="@+id/remote_video"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"/>
 
     <!-- User Name -->
     <TextView
         android:id="@+id/user_name"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="Henry Benjamin"
         android:textStyle="bold"
         android:textSize="25sp"
-        android:textColor="@color/black"
+        android:textColor="@android:color/black"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"/>
 
+    <!-- Call Timer -->
     <TextView
+        android:id="@+id/call_timer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="10:32"
-        android:textSize="20dp"
-        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
         android:layout_below="@id/user_name"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="10dp"/>
 
-
-    <View
-        android:layout_width="125dp"
-        android:layout_height="150dp"
-        android:background="@drawable/video_panel"
-        android:layout_alignEnd="@id/bottom_bar"
+    <!-- Local Camera Preview (Bottom-Right Corner) -->
+    <FrameLayout
+        android:id="@+id/local_video_container"
+        android:layout_width="120dp"
+        android:layout_height="160dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="30dp"
         android:layout_above="@id/bottom_bar"
-        android:layout_marginVertical="30dp"
+        android:background="@android:color/white"
+        android:elevation="5dp">
 
-        />
+        <SurfaceView
+            android:id="@+id/local_video"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </FrameLayout>
 
-    <!-- Bottom Button Bar -->
+    <!-- Bottom Button Bar (Unchanged) -->
     <LinearLayout
         android:id="@+id/bottom_bar"
         android:layout_width="match_parent"
@@ -59,8 +78,7 @@
             android:layout_height="50dp"
             android:padding="5dp"
             android:background="@drawable/optns"
-            android:layout_marginEnd="10dp"
-            />
+            android:layout_marginEnd="10dp"/>
 
         <!-- Video Call -->
         <ImageView
@@ -69,16 +87,14 @@
             android:layout_height="50dp"
             android:padding="10dp"
             android:background="@drawable/video_call"
-            android:layout_marginEnd="10dp"
-            />
+            android:layout_marginEnd="10dp"/>
 
         <ImageView
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:padding="10dp"
             android:background="@drawable/speaker"
-            android:layout_marginEnd="10dp"
-            />
+            android:layout_marginEnd="10dp"/>
 
         <!-- Speaker -->
         <ImageView
@@ -86,8 +102,7 @@
             android:layout_height="50dp"
             android:padding="10dp"
             android:background="@drawable/mute"
-            android:layout_marginEnd="10dp"
-            />
+            android:layout_marginEnd="10dp"/>
 
         <!-- End Call -->
         <ImageView
@@ -95,9 +110,7 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:padding="10dp"
-            android:background="@drawable/end_call"
-            />
+            android:background="@drawable/end_call"/>
     </LinearLayout>
-
 
 </RelativeLayout>

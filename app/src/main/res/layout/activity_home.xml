@@ -1,253 +1,156 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/swipeRefreshLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:weightSum="10"
-    tools:context=".Home">
+    android:background="#FDFDFD">
 
-    <!-- Top section with text and DM button -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1.5"
+        android:layout_height="match_parent"
         android:orientation="vertical"
-        android:padding="10dp"
-        >
+        android:weightSum="8.5">
 
-        <LinearLayout
+        <!-- Top Spacer -->
+        <View
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum="5">
+            android:layout_height="0dp"
+            android:layout_weight="0.25"/>
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="5"
-                android:text="My Community"
-                android:layout_marginLeft="20dp"
-                android:textColor="#313131"
-                android:textSize="30dp"
-                android:textStyle="bold" />
-
-
-            <Button
-                android:id="@+id/dm_button"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:background="@drawable/dm_icon" />
-        </LinearLayout>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="A place for all your questions"
-            android:textColor="#313131"
-            android:textSize="20dp"
-            android:layout_marginLeft="20dp" />
-    </LinearLayout>
-
-    <!-- Middle section for stories and posts -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="7.5"
-        android:orientation="vertical">
-
-        <!-- Scrollable stories panel -->
-        <HorizontalScrollView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            >
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:scrollbars="none"
-                android:padding="10dp"
-                android:layout_marginHorizontal="5dp"
-                android:layout_marginVertical="5dp"
-                >
-                <!-- Add your story items here -->
-
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:src="@drawable/my_story"
-                     />
-
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:src="@drawable/story_1"
-                     />
-
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:src="@drawable/story_2"
-                    />
-
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:src="@drawable/story_3"
-                    />
-
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:src="@drawable/story_1"
-                    />
-
-            </LinearLayout>
-
-        </HorizontalScrollView>
-
-        <!-- Scrollable posts section -->
-        <ScrollView
+        <!-- Header Section -->
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1">
 
-            <LinearLayout
-                android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/myCommunity"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:text="My Community"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/black"/>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
+            <TextView
+                android:id="@+id/msg"
+                android:layout_below="@id/myCommunity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A place for all your questions"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginStart="20dp"
+                android:textColor="@color/black"/>
 
-                    >
+            <ImageButton
+                android:id="@+id/dm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/dm"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:layout_marginTop="20dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="20dp"/>
+        </RelativeLayout>
 
-                    <!-- User Profile Section -->
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:gravity="center_vertical">
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#000000"/>
 
-                        <!-- Profile Image -->
-                        <ImageView
-                            android:layout_width="45dp"
-                            android:layout_height="45dp"
-                            android:src="@drawable/post_pfp"
-                            android:layout_marginLeft="15dp"
-                            />
+        <!-- Stories Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
 
-                        <!-- Username -->
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Emily James"
-                            android:textStyle="bold"
-                            android:textSize="20dp"
-                            android:textColor="#313131"
-                            android:layout_marginLeft="15dp"/>
+            <!-- Container for Profile Picture & Add Button -->
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp">
 
-                        <!-- Options Button -->
-                        <ImageView
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
-                            android:src="@drawable/post_optns_icon"
-                            android:layout_marginRight="15dp"
-                            />
-                    </LinearLayout>
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/storyImage"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/me"
+                    android:background="@drawable/add_circle"
+                    android:padding="5dp"/>
 
-                    <!-- Post Image -->
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="300dp"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/post_image_1"
-                        android:layout_marginTop="8dp"/>
+                <ImageView
+                    android:id="@+id/storyAdd"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/add1"
+                    android:layout_alignBottom="@id/storyImage"
+                    android:layout_alignEnd="@id/storyImage"
+                    android:layout_marginEnd="-5dp"
+                    android:layout_marginBottom="-5dp"
+                    android:clickable="true"
+                    android:focusable="true"/>
+            </RelativeLayout>
 
-                    <!-- Interaction Buttons -->
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:gravity="start"
-                        android:paddingTop="5dp"
-                        android:layout_marginHorizontal="10dp">
+            <!-- Story RecyclerView -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/storiesRecyclerView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                tools:listitem="@layout/item_story"/>
+        </LinearLayout>
 
-                        <ImageView
-                            android:layout_width="24dp"
-                            android:layout_height="24dp"
-                            android:src="@drawable/like_icon"
-                            android:contentDescription="Like"
-                            android:layout_marginEnd="15dp"/>
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#000000"/>
 
-                        <ImageView
-                            android:layout_width="24dp"
-                            android:layout_height="24dp"
-                            android:src="@drawable/comment_icon"
-                            android:contentDescription="Comment"
-                            android:layout_marginEnd="15dp"/>
+        <!-- Posts Section -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/postsRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5.25"
+            tools:listitem="@layout/item_post"/>
 
-                        <ImageView
-                            android:layout_width="24dp"
-                            android:layout_height="24dp"
-                            android:src="@drawable/share_icon"
-                            android:contentDescription="Share"
-                            />
+        <!-- Bottom Navigation Bar -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#000000"/>
 
-                        <View
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.75"
+            android:weightSum="5"
+            android:orientation="horizontal">
 
-                        <ImageView
-                            android:layout_width="24dp"
-                            android:layout_height="24dp"
-                            android:contentDescription="Share"
-                            android:src="@drawable/save_icon"
+            <!-- Bottom Navigation Items -->
+            <include
+                android:id="@+id/navigation"
+                layout="@layout/activity_nav_bar"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"/>
+        </LinearLayout>
 
-                            />
+        <!-- Bottom Spacer -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.25"/>
 
-                    </LinearLayout>
-
-                    <!-- Caption Section -->
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Emily James"
-                        android:textSize="14sp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginHorizontal="10dp"
-                        android:textStyle="bold"
-                        android:textColor="#313131"/>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Had a great hike across this beautiful landscape 🖤🎶🏔️"
-                        android:textSize="14sp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginHorizontal="10dp"
-                        android:textColor="#313131"/>
-
-
-                </LinearLayout>
-            </LinearLayout>
-
-        </ScrollView>
     </LinearLayout>
-
-    <!-- Navigation bar fixed at the bottom -->
-    <include
-        android:id="@+id/navigation"
-        layout="@layout/activity_nav_bar"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1" />
-
-</LinearLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

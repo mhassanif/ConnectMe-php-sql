@@ -30,6 +30,29 @@
                 android:textStyle="bold"
                 android:textSize="25sp"
                 android:textColor="@color/black"
+                />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <!-- Logout Button -->
+            <Button
+                android:id="@+id/logout_button"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:text="Logout"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:padding="10dp"
+                android:background="@drawable/rounded_rectange_button"/>
+
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
                 android:layout_weight="1"/>
 
             <ImageView
@@ -41,14 +64,15 @@
         </LinearLayout>
 
 
-        <ImageView
+        <!-- Replace the existing ImageView section -->
+        <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/profile_image"
             android:layout_width="120dp"
             android:layout_height="120dp"
             android:layout_gravity="center"
-            android:scaleType="centerCrop"
-            android:src="@drawable/my_pfp"
-            android:layout_marginTop="8dp"/>
+            android:src="@drawable/default_pfp"
+            android:layout_marginTop="8dp"
+            android:scaleType="centerCrop"/>
 
         <!-- User Name -->
         <TextView
@@ -56,7 +80,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Olivia Daniel"
+            android:text="User"
             android:textSize="23dp"
             android:textStyle="bold"
             android:textColor="@color/black"
@@ -68,7 +92,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="two bananas for a pound, three bananas for a euro"
+            android:text="defualt bio"
             android:textSize="20sp"
             android:textColor="@color/black"
             android:layout_marginTop="4dp"
@@ -94,7 +118,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="7"
+                    android:text="0"
                     android:textStyle="bold"
                     android:textSize="25dp"
                     android:textColor="@color/black"
@@ -121,7 +145,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="410"
+                    android:text="0"
                     android:textStyle="bold"
                     android:textSize="25dp"
                     android:textColor="@color/black"
@@ -148,7 +172,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="387"
+                    android:text="0"
                     android:textStyle="bold"
                     android:textSize="25dp"
                     android:textColor="@color/black"

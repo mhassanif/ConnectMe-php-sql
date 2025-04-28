@@ -1,120 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     android:orientation="vertical"
-    android:background="@android:color/white"
-    android:id="@+id/main">
+    tools:context=".Search">
 
-    <!-- Search and Recent Searches -->
+    <!-- Search Bar with Button -->
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="9"
-        android:padding="16dp">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="16dp">
 
-        <!-- Search Bar -->
         <EditText
-            android:id="@+id/searchEditText"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:hint="Search"
-            android:paddingStart="16dp"
-            android:paddingEnd="16dp"
-            android:background="@null"
-            android:drawableEnd="@drawable/search_icon"
-            android:textColorHint="@android:color/darker_gray"
-            android:textColor="@android:color/black"
-            android:drawablePadding="10dp"
-            android:inputType="text" />
+            android:id="@+id/searchInput"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:hint="Enter name to search"
+            android:padding="10dp"
+            android:background="@android:drawable/editbox_background"
+            android:textColorHint="#B0B0B0"
+            android:textSize="16sp" />
 
-        <!-- Recent Searches Text -->
-        <TextView
+        <Button
+            android:id="@+id/searchButton"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:background="@drawable/search_icon"
+            android:paddingHorizontal="12dp"
+            android:layout_marginStart="8dp"/>
+    </LinearLayout>
+
+    <!-- Filter Checkboxes -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="8dp">
+
+        <CheckBox
+            android:id="@+id/followersFilterCheckBox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Recent searches"
-            android:textStyle="bold"
-            android:textColor="#6B4F36"
-            android:paddingTop="20dp"
-            android:textSize="18dp" />
+            android:text="Followers"
+            android:textSize="16sp"
+            android:textColor="#6F2604" />
 
-        <!-- Recent Search Item -->
-        <LinearLayout
-            android:layout_width="match_parent"
+        <CheckBox
+            android:id="@+id/followingFilterCheckBox"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingTop="10dp"
-            android:layout_marginVertical="10dp">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Henry Benjamin"
-                android:textColor="@android:color/black"
-                android:textSize="18dp" />
-
-            <ImageView
-                android:id="@+id/deleteSearch1"
-                android:layout_width="30dp"
-                android:layout_height="24dp"
-                android:src="@drawable/cross"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingTop="10dp"
-            android:layout_marginVertical="10dp">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Emily James"
-                android:textColor="@android:color/black"
-                android:textSize="18dp" />
-
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="24dp"
-                android:src="@drawable/cross"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingTop="10dp"
-            android:layout_marginVertical="10dp">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Lily Thomas"
-                android:textColor="@android:color/black"
-                android:textSize="18dp" />
-
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="24dp"
-                android:src="@drawable/cross"/>
-        </LinearLayout>
+            android:text="Following"
+            android:textSize="16sp"
+            android:textColor="#6F2604"
+            android:layout_marginStart="16dp" />
 
     </LinearLayout>
 
-    <LinearLayout
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/searchResultsRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        android:layout_marginHorizontal="20dp" />
 
-        <include
-            layout="@layout/activity_nav_bar"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
-    </LinearLayout>
+    <include
+        android:id="@+id/navigation"
+        layout="@layout/activity_nav_bar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp" />
 
 </LinearLayout>

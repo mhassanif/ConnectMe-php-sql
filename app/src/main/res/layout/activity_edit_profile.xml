@@ -36,21 +36,22 @@
     </LinearLayout>
 
     <!-- Profile Image -->
-    <ImageView
+    <!-- Replace the existing ImageView section -->
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/profile_image"
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:layout_gravity="center"
-        android:scaleType="centerCrop"
-        android:src="@drawable/edit_pfp"
-        android:layout_marginTop="12dp"/>
+        android:src="@drawable/default_pfp"
+        android:layout_marginTop="12dp"
+        android:scaleType="centerCrop"/>
 
     <TextView
         android:id="@+id/user_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Olivia Daniel"
+        android:text="User"
         android:textSize="23dp"
         android:textStyle="bold"
         android:textColor="@color/black"
@@ -74,7 +75,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/edit_text_outline"
         android:padding="10dp"
-        android:text="Olivia Daniel"
+        android:text=""
         android:textColor="@color/black"
         android:layout_marginHorizontal="20dp"/>
 
@@ -95,7 +96,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/edit_text_outline"
         android:padding="10dp"
-        android:text="OliviaD"
+        android:text=""
         android:textColor="@color/black"
         android:layout_marginHorizontal="20dp"/>
 
@@ -116,7 +117,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/edit_text_outline"
         android:padding="10dp"
-        android:text="+42 7412 5443058"
+        android:text=""
         android:textColor="@color/black"
         android:inputType="phone"
         android:layout_marginHorizontal="20dp"/>
@@ -144,11 +145,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
-            android:text="Just an average 14 year old"
+            android:text=""
             android:textColor="@color/black"
             android:inputType="textMultiLine"
             />
-
 
     </LinearLayout>
 
