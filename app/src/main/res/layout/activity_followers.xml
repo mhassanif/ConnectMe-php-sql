@@ -21,14 +21,14 @@
             android:layout_marginEnd="10dp"/>
 
         <TextView
+            android:id="@+id/usernameTextView"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="OliviaD"
+            android:text="Profile"
             android:textSize="25dp"
             android:textStyle="bold"
             android:textColor="@color/black"/>
-
 
     </LinearLayout>
 
@@ -39,19 +39,18 @@
         android:paddingVertical="10dp"
         android:weightSum="2">
 
-
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_weight="1"
-            android:gravity="center"
-            >
+            android:gravity="center">
 
             <TextView
+                android:id="@+id/followersCountTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="410 Followers"
+                android:text="0 Followers"
                 android:textSize="20dp"
                 android:textStyle="bold"
                 android:textColor="#59442F"
@@ -66,116 +65,21 @@
                 android:visibility="visible"/>
         </LinearLayout>
 
-
-        <!--        req-->
         <TextView
             android:id="@+id/following_tab"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="387 Following"
+            android:text="0 Following"
             android:textSize="20dp"
             android:gravity="center"/>
 
     </LinearLayout>
 
-    <EditText
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/followersRecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:hint="Search"
-        android:background="@null"
-        android:paddingStart="16dp"
-        android:drawableEnd="@drawable/search_icon"
-        android:layout_marginVertical="20dp"
-        />
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp" />
 
-    <LinearLayout
-        android:id="@+id/top_dm"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="10dp"
-        android:gravity="center_vertical">
-
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@drawable/story_1"
-            android:layout_marginEnd="10dp"/>
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Henry Benjamin"
-            android:textSize="16dp"
-            android:textColor="@color/black"
-            android:textStyle="bold"/>
-
-        <ImageView
-            android:id="@+id/top_chat_icon"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/chat_icon"
-            />
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="10dp"
-        android:gravity="center_vertical">
-
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@drawable/story_2"
-            android:layout_marginEnd="10dp"/>
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Chirstopher"
-            android:textSize="16dp"
-            android:textColor="@color/black"
-            android:textStyle="bold"/>
-
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/chat_icon"
-            />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="10dp"
-        android:gravity="center_vertical">
-
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@drawable/my_story"
-            android:layout_marginEnd="10dp"/>
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Laura Ryan"
-            android:textSize="16dp"
-            android:textStyle="bold"
-            android:textColor="@color/black"/>
-
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/chat_icon"
-            />
-    </LinearLayout>
 </LinearLayout>
