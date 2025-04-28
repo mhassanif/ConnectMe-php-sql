@@ -86,3 +86,4 @@ CREATE TABLE follow_requests (
     FOREIGN KEY (target_id) REFERENCES users(user_id) ON DELETE CASCADE,
     UNIQUE (requester_id, target_id) -- Prevent duplicate requests
 );
+`
